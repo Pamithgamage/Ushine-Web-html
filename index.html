@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U Shine Batik</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Nunito:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="nav-wrap">
+
+      <!-- LEFT: LOGO ONLY -->
+      <div class="brand">
+        <a href="index.html">
+        <img src="/images/gold-logo.png" class="logo" alt="Logo" />
+        </a>
+      </div>
+
+      <!-- CENTER: LINKS (Desktop only) -->
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <a href="shop.html">Shop</a>
+      </nav>
+
+      <!-- RIGHT: SEARCH + ICONS -->
+      <div class="nav-right">
+        <div class="search" aria-label="Search">
+          <input type="text" placeholder="Search For Batiks" />
+          <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <!-- Mobile hamburger only -->
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Desktop icons only (click -> brown fill) -->
+        <div class="nav-icons" aria-label="Quick actions">
+          <button class="icon-btn nav-action active" data-action="profile" aria-label="Profile">
+            <i class="fa-regular fa-user"></i>
+          </button>
+
+          <button class="icon-btn nav-action" data-action="wishlist" aria-label="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge">5</span>
+          </button>
+
+          <button class="icon-btn nav-action" data-action="cart" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mobile blur menu (left corner) -->
+    <div class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
+      <a href="#about" class="m-link">About Us</a>
+      <a href="#contact" class="m-link">Contact Us</a>
+      <a href="shop.html" class="m-link">Shop</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="slides">
+      <div class="slide active" style="background-image:url('/images/hero-1.png')"></div>
+    </div>
+  </section>
+
+  <section id="profile"></section>
+  <section id="wishlist"></section>
+  <section id="cart"></section>
+  <section id="about"></section>
+  <section id="contact"></section>
+
+  <!-- Mobile bottom nav -->
+  <nav class="bottom-nav" aria-label="Bottom Navigation">
+    <a href="#profile" class="bnav-link active" data-target="profile" aria-label="Profile">
+      <i class="fa-regular fa-user"></i>
+    </a>
+
+    <a href="#wishlist" class="bnav-link" data-target="wishlist" aria-label="Wishlist">
+      <i class="fa-regular fa-heart"></i>
+      <span class="mini-badge">5</span>
+    </a>
+
+    <a href="#cart" class="bnav-link" data-target="cart" aria-label="Cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+  </nav>
+
+  <!-- Top Collection (Scrollable like image) -->
+  <section class="top-collection">
+    <div class="tc-container">
+      <h2 class="tc-heading">Top Collection</h2>
+
+      <div class="tc-scroll" aria-label="Top Collection horizontal list">
+        <!-- Card 1 -->
+        <article class="tc-card">
+          <div class="tc-image">
+            <img src="/images/product/RDC06452.jpg" alt="Sadaras Saree">
+          </div>
+
+          <h3 class="tc-title">Sadaras Saree</h3>
+          <p class="tc-desc">
+            Our watches count steps, our rings score sleep, our phones track stress.
+            Yet despite all this data, few people actually feel more connected to their bodies.
+          </p>
+
+          <button class="tc-btn js-cart-btn" type="button">Add to Cart</button>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="tc-card">
+          <div class="tc-image">
+            <img src="/images/product/RDC06732.jpg" alt="Sadaras Saree">
+          </div>
+
+          <h3 class="tc-title">Sadaras Saree</h3>
+          <p class="tc-desc">
+            Our watches count steps, our rings score sleep, our phones track stress.
+            Yet despite all this data, few people actually feel more connected to their bodies.
+          </p>
+
+          <button class="tc-btn js-cart-btn" type="button">Add to Cart</button>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="tc-card">
+          <div class="tc-image">
+            <img src="/images/product/RDC07005.jpg" alt="Sadaras Saree">
+          </div>
+
+          <h3 class="tc-title">Sadaras Saree</h3>
+          <p class="tc-desc">
+            Our watches count steps, our rings score sleep, our phones track stress.
+            Yet despite all this data, few people actually feel more connected to their bodies.
+          </p>
+
+          <button class="tc-btn js-cart-btn" type="button">Add to Cart</button>
+        </article>
+
+        <!-- ✅ Add more cards here -->
+      </div>
+    </div>
+  </section>
+
+  <section class="limited-offers">
+    <div class="tc-container">
+      <div class="lo-top-line"></div>
+      <h2 class="lo-heading">Limited Offer Deals</h2>
+
+      <div class="lo-grid">
+
+        <!-- CARD -->
+        <article class="lo-card v2">
+          <div class="lo-media v2">
+            <img src="/images/product/RDC06452.jpg" alt="Nilanjana Batik Saree">
+
+            <!-- heart -->
+            <button class="lo-heart v2 js-heart" type="button" aria-label="Add to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+
+          <div class="lo-body">
+            <h3 class="lo-title v2">Nilanjana Batik Saree</h3>
+            <p class="lo-subtitle">Handmade Saree, Lanka Voile Saree</p>
+
+            <div class="lo-price">LKR 5690/=</div>
+
+            <div class="lo-divider"></div>
+
+            <div class="lo-payments" aria-label="Payment methods">
+              <img src="/images/paylogos/koko.png" alt="Koko" class="pay-logo">
+              <span class="pay-sep"></span>
+              <img src="/images/paylogos/mint.png" alt="Mintpay" class="pay-logo">
+              <span class="pay-sep"></span>
+              <img src="/images/paylogos/payzy.png" alt="Payzy" class="pay-logo">
+            </div>
+          </div>
+        </article>
+
+        <!-- Duplicate more cards same design -->
+        <article class="lo-card v2">
+          <div class="lo-media v2">
+            <img src="/images/product/RDC06732.jpg" alt="Nilanjana Batik Saree">
+            <button class="lo-heart v2 js-heart" type="button" aria-label="Add to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+
+          <div class="lo-body">
+            <h3 class="lo-title v2">Nilanjana Batik Saree</h3>
+            <p class="lo-subtitle">Handmade Saree, Lanka Voile Saree</p>
+            <div class="lo-price">LKR 5690/=</div>
+            <div class="lo-divider"></div>
+            <div class="lo-payments">
+              <img src="/images/paylogos/koko.png" alt="Koko" class="pay-logo">
+              <span class="pay-sep"></span>
+              <img src="/images/paylogos/mint.png" alt="Mintpay" class="pay-logo">
+              <span class="pay-sep"></span>
+              <img src="/images/paylogos/payzy.png" alt="Payzy" class="pay-logo">
+            </div>
+          </div>
+        </article>
+
+        <!-- ...more cards... -->
+
+      </div>
+
+      <div class="lo-footer">
+        <button class="lo-more" type="button">See More</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="brand-banner">
+    <div class="tc-container">
+      <div class="lo-top-line"></div>
+      <div class="bb-wrap">
+        <!-- Background image -->
+        <img class="bb-bg" src="/images/hero-1.png" alt="U Shine Batik Banner">
+
+        <!-- Vignette / blur sides overlay -->
+        <div class="bb-vignette"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- premium -->
+
+  <section class="limited-offers">
+    <div class="tc-container">
+      <div class="lo-top-line"></div>
+      <h2 class="lo-heading">Premium Batik Sarees</h2>
+
+      <div class="lo-grid">
+
+        <!-- CARD -->
+        <article class="lo-card v2">
+          <div class="lo-media v2">
+            <img src="/images/product/RDC06452.jpg" alt="Nilanjana Batik Saree">
+            <!-- heart -->
+            <button class="lo-heart v2 js-heart" type="button" aria-label="Add to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+
+          <div class="lo-body">
+            <h3 class="lo-title v2">Nilanjana Batik Saree</h3>
+            <p class="lo-subtitle">Handmade Saree, Lanka Voile Saree</p>
+
+            <div class="lo-price">LKR 5690/=</div>
+
+            <div class="lo-divider"></div>
+
+            <div class="lo-payments" aria-label="Payment methods">
+              <img src="/images/paylogos/koko.png" alt="Koko" class="pay-logo">
+              <span class="pay-sep"></span>
+              <img src="/images/paylogos/mint.png" alt="Mintpay" class="pay-logo">
+              <span class="pay-sep"></span>
+              <img src="/images/paylogos/payzy.png" alt="Payzy" class="pay-logo">
+            </div>
+          </div>
+        </article>
+
+        <!-- Duplicate more cards same design -->
+        <article class="lo-card v2">
+          <div class="lo-media v2">
+            <img src="/images/product/RDC06732.jpg" alt="Nilanjana Batik Saree">
+            <button class="lo-heart v2 js-heart" type="button" aria-label="Add to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+
+          <div class="lo-body">
+            <h3 class="lo-title v2">Nilanjana Batik Saree</h3>
+            <p class="lo-subtitle">Handmade Saree, Lanka Voile Saree</p>
+            <div class="lo-price">LKR 5690/=</div>
+            <div class="lo-divider"></div>
+            <div class="lo-payments">
+              <img src="/images/paylogos/koko.png" alt="Koko" class="pay-logo">
+              <span class="pay-sep"></span>
+              <img src="/images/paylogos/mint.png" alt="Mintpay" class="pay-logo">
+              <span class="pay-sep"></span>
+              <img src="/images/paylogos/payzy.png" alt="Payzy" class="pay-logo">
+            </div>
+          </div>
+        </article>
+
+        <!-- ...more cards... -->
+
+      </div>
+
+      <div class="lo-footer">
+        <button class="lo-more" type="button">See More</button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Brand -->
+      <div class="footer-col footer-brand">
+        <h3 class="footer-logo">
+          U SHINE <span>BATIK</span>
+        </h3>
+        <p class="footer-desc">
+          A perfect blend of artistry and Sri Lankan tradition.
+          Handcrafted batik sarees designed with elegance and heritage.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Top Collection</a></li>
+          <li><a href="#">Limited Offers</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="footer-col">
+        <h4 class="footer-title">Support</h4>
+        <ul class="footer-links">
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4 class="footer-title">Contact</h4>
+        <ul class="footer-contact">
+          <li>📍 Sri Lanka</li>
+          <li>📞 +94 77 123 4567</li>
+          <li>✉️ info@ushinebatik.lk</li>
+        </ul>
+
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2026 U Shine Batik. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
