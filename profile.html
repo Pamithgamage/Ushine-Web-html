@@ -46,11 +46,13 @@
 
                 <!-- Desktop icons only (click -> brown fill) -->
                 <div class="nav-icons" aria-label="Quick actions">
-                    <button class="icon-btn nav-action active" data-action="profile" aria-label="Profile" onclick="profile();">
+                    <button class="icon-btn nav-action active" data-action="profile" aria-label="Profile"
+                        onclick="profile();">
                         <i class="fa-regular fa-user"></i>
                     </button>
 
-                    <button class="icon-btn nav-action" data-action="wishlist" aria-label="Wishlist" onclick="wishlist();">
+                    <button class="icon-btn nav-action" data-action="wishlist" aria-label="Wishlist"
+                        onclick="wishlist();">
                         <i class="fa-regular fa-heart"></i>
                         <span class="badge">5</span>
                     </button>
@@ -94,7 +96,356 @@
     </nav>
 
     <!-- profile -->
-     
+    <!-- HERO (example) -->
+    <section class="profile-hero">
+        <img class="ph-bg" src="/images/login.jpg" alt="Profile hero">
+        <div class="ph-overlay"></div>
+
+        <div class="ph-content">
+            <h1>Your Profile</h1>
+            <p>Hello, User Name</p>
+        </div>
+    </section>
+
+    <!-- TABS (Scrollable) -->
+    <section class="profile-tabs-wrap">
+        <div class="pt-container">
+            <nav class="profile-tabs" id="profileTabs" aria-label="Profile navigation">
+                <button class="pt-tab is-active" data-tab="details" type="button">My Details</button>
+                <button class="pt-tab" data-tab="orders" type="button">Orders</button>
+                <button class="pt-tab" data-tab="addresses" type="button">Addresses</button>
+                <button class="pt-tab" data-tab="logout" type="button">Logout</button>
+            </nav>
+        </div>
+        <div class="pt-line"></div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="profile-content">
+        <div class="pt-container">
+
+            <!-- My Details -->
+            <div class="pt-panel is-show" id="tab-details">
+                <div class="pd-grid">
+                    <div class="pd-avatar">
+                        <div class="pd-circle">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="pd-field">
+                        <label>Your Name</label>
+                        <input type="text" value="User Name" readonly>
+                    </div>
+
+                    <div class="pd-field">
+                        <label>Email</label>
+                        <input type="email" value="Username@gmail.com" readonly>
+                    </div>
+
+                    <div class="pd-field">
+                        <label>Contact</label>
+                        <input type="text" value="070 125 4009">
+                    </div>
+                </div>
+
+                <div class="pd-divider"></div>
+
+                <h2 class="pd-title">Reset Password</h2>
+                <div class="pd-reset">
+                    <div class="pd-field">
+                        <label>New Password</label>
+                        <input type="password" placeholder="password">
+                    </div>
+
+                    <div class="pd-field">
+                        <label>Confirm Password</label>
+                        <input type="password" placeholder="confirm password">
+                    </div>
+
+                    <button class="pd-btn" type="button">Change Password</button>
+                </div>
+
+
+
+            </div>
+
+            <!-- Orders (demo) -->
+            <!-- Orders -->
+            <div class="pt-panel" id="tab-orders">
+
+                <h2 class="orders-title">Your Orders</h2>
+
+                <!-- Empty state -->
+                <div class="orders-empty" id="ordersEmpty">
+                    No orders yet.
+                </div>
+
+                <!-- Orders list (default show) -->
+                <div class="orders-list" id="ordersList">
+
+                    <!-- CARD 1: Ready to Deliver -->
+                    <article class="order-card" data-stage="ready">
+                        <div class="order-left">
+                            <div class="order-thumb">
+                                <img src="/images/product/RDC06452.jpg" alt="Selarathi Batik Saree">
+                            </div>
+
+                            <div class="order-info">
+                                <h3>Selarathi Batik Saree</h3>
+                                <p>Handmade • Lanka Voile</p>
+
+                                <span class="om-pill om-pill-processing-2">Saree Processing</span>
+                            </div>
+                        </div>
+
+                        <div class="order-mid">
+                            <div class="order-price">LKR 5,950</div>
+                        </div>
+
+                        <div class="order-actions">
+                            <button class="order-btn order-btn-dark view-details-btn">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- CARD 2: Packaging Stage (ONLY stage with cancel) -->
+                    <article class="order-card" data-stage="packaging">
+                        <div class="order-left">
+                            <div class="order-thumb">
+                                <img src="/images/product/RDC06732.jpg" alt="Selarathi Batik Saree">
+                            </div>
+
+                            <div class="order-info">
+                                <h3>Selarathi Batik Saree</h3>
+                                <p>Handmade • Lanka Voile</p>
+
+                                <span class="om-pill om-pill-deliver-1">Ready to Deliver</span>
+                            </div>
+                        </div>
+
+                        <div class="order-mid">
+                            <div class="order-price">LKR 5,950</div>
+                        </div>
+
+                        <div class="order-actions">
+                            <button class="order-btn order-btn-ghost order-cancel" type="button">Cancel Order</button>
+                            <button class="order-btn order-btn-dark view-details-btn">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- CARD 3: Delivered -->
+                    <article class="order-card" data-stage="delivered">
+                        <div class="order-left">
+                            <div class="order-thumb">
+                                <img src="/images/product/RDC07005.jpg" alt="Selarathi Batik Saree">
+                            </div>
+
+                            <div class="order-info">
+                                <h3>Selarathi Batik Saree</h3>
+                                <p>Handmade • Lanka Voile</p>
+
+                                <span class="om-pill om-pill-delivered-2">Delivered</span>
+                            </div>
+                        </div>
+
+                        <div class="order-mid">
+                            <div class="order-price">LKR 5,950</div>
+                        </div>
+
+                        <div class="order-actions">
+                            <button class="order-btn order-btn-dark view-details-btn">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- CARD 4: In Transit -->
+                    <article class="order-card" data-stage="transit">
+                        <div class="order-left">
+                            <div class="order-thumb">
+                                <img src="/images/product/RDC07260.jpg" alt="Selarathi Batik Saree">
+                            </div>
+
+                            <div class="order-info">
+                                <h3>Selarathi Batik Saree</h3>
+                                <p>Handmade • Lanka Voile</p>
+
+                                <span class="om-pill om-pill-processing">In Transit</span>
+                            </div>
+                        </div>
+
+                        <div class="order-mid">
+                            <div class="order-price">LKR 5,950</div>
+                        </div>
+
+                        <div class="order-actions">
+                            <button class="order-btn order-btn-dark view-details-btn">
+                                View Details
+                            </button>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+            <!-- Addresses -->
+            <div class="pt-panel" id="tab-addresses">
+
+                <h2 class="addr-title">Your Addresses</h2>
+
+                <div class="addr-grid">
+
+                    <!-- Address card (sample) -->
+                    <article class="addr-card-pro" data-id="1">
+                        <div class="addr-card-top">
+                            <button class="addr-edit-pro" type="button" aria-label="Edit address">
+                                <i class="fa-solid fa-pen"></i>
+                                Edit
+                            </button>
+                            <button class="addr-edit-pro-2" type="button">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+
+                        <div class="addr-lines">
+                            <p>No 20,</p>
+                            <p>Pannipitiya, Maharagama</p>
+                            <p>Sri Lanka</p>
+                        </div>
+                    </article>
+
+                    <!-- Add tile -->
+                    <button class="addr-add-pro" id="addrAddBtn" type="button" aria-label="Add address">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Add Address</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- ===== Address Modal (Add/Edit) ===== -->
+            <div class="addr-modal" id="addrModal">
+                <div class="addr-modal-box modern" role="dialog" aria-modal="true" aria-label="Address form">
+
+                    <button class="addr-close" id="addrClose" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <div class="addr-modal-head">
+                        <div>
+                            <p class="addr-kicker" id="addrModeText">Address</p>
+                            <h3 class="addr-modal-title" id="addrModalTitle">Add Address</h3>
+                        </div>
+                    </div>
+
+                    <form class="addr-form" id="addrForm">
+                        <div class="addr-field">
+                            <label>Address Line 1</label>
+                            <input type="text" placeholder="No 20, Street name" required>
+                        </div>
+
+                        <div class="addr-field">
+                            <label>Address Line 2</label>
+                            <input type="text" placeholder="Area / Town (optional)">
+                        </div>
+
+                        <div class="addr-2col">
+                            <div class="addr-field">
+                                <label>City</label>
+                                <input type="text" placeholder="Maharagama" required>
+                            </div>
+
+                            <div class="addr-field">
+                                <label>Country</label>
+                                <input type="text" placeholder="Sri Lanka" required>
+                            </div>
+                        </div>
+
+                        <div class="addr-actions-row">
+                            <button class="addr-btn addr-btn-ghost" type="button" id="addrCancelBtn">Cancel</button>
+                            <button class="addr-btn addr-btn-dark" type="submit">Save</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+            <!-- Logout (demo) -->
+            <div class="pt-panel" id="tab-logout">
+                <p class="pt-muted">Click below to logout.</p>
+                <button class="pd-btn" type="button">Logout</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- view order box-->
+    <div class="order-modal" id="orderModal">
+        <div class="order-modal-box modern" role="dialog" aria-modal="true" aria-label="Order tracking">
+
+            <button class="order-modal-close" id="orderModalClose" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="om-head">
+                <div>
+                    <p class="om-kicker">Order Details</p>
+                    <h3 class="om-title">#2540695</h3>
+                </div>
+
+                <span class="om-pill om-pill-processing">In Transit</span>
+            </div>
+
+            <div class="om-card">
+                <div class="om-row">
+                    <div class="om-dot done"></div>
+                    <div class="om-info">
+                        <h4>Saree Processing</h4>
+                        <p>2026/02/10 → 2026/02/14</p>
+                    </div>
+                    <span class="om-status done">Complete</span>
+                </div>
+
+                <div class="om-row">
+                    <div class="om-dot done"></div>
+                    <div class="om-info">
+                        <h4>Ready to Deliver</h4>
+                        <p>2026/02/14 → 2026/02/15</p>
+                    </div>
+                    <span class="om-status done">Complete</span>
+                </div>
+
+                <div class="om-row current">
+                    <div class="om-dot current"></div>
+                    <div class="om-info">
+                        <h4>In Transit</h4>
+                        <p>2026/02/15 → 2026/02/18</p>
+                    </div>
+                    <span class="om-status processing">Processing</span>
+                </div>
+
+                <div class="om-row">
+                    <div class="om-dot pending"></div>
+                    <div class="om-info">
+                        <h4>Order Complete</h4>
+                        <p>Expected: 2026/02/18</p>
+                    </div>
+                    <span class="om-status pending">Pending</span>
+                </div>
+            </div>
+
+            <div class="om-footer">
+                <button class="om-btn om-btn-ghost" type="button">Download Invoice</button>
+                <button class="om-btn om-btn-dark" type="button">Contact Support</button>
+            </div>
+
+        </div>
+    </div>
 
 
     <footer class="site-footer">

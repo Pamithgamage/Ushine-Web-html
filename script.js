@@ -381,3 +381,125 @@ function cart() {
 function profile() {
   window.location.href = "profile.html";
 }
+// profile
+document.addEventListener("DOMContentLoaded", () => {
+  const tabsWrap = document.getElementById("profileTabs");
+  if (!tabsWrap) return;
+
+  const tabs = tabsWrap.querySelectorAll(".pt-tab");
+  const panels = {
+    details: document.getElementById("tab-details"),
+    orders: document.getElementById("tab-orders"),
+    addresses: document.getElementById("tab-addresses"),
+    logout: document.getElementById("tab-logout"),
+  };
+
+  const showTab = (key) => {
+    tabs.forEach(t => t.classList.toggle("is-active", t.dataset.tab === key));
+    Object.keys(panels).forEach(k => {
+      panels[k]?.classList.toggle("is-show", k === key);
+    });
+  };
+
+  tabsWrap.addEventListener("click", (e) => {
+    const btn = e.target.closest(".pt-tab");
+    if (!btn) return;
+    showTab(btn.dataset.tab);
+
+    // ✅ ensure active tab stays in view (scrollable)
+    btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  });
+
+  // default
+  showTab("details");
+});
+
+// profile orders
+// ===== Orders: empty state + cancel rule =====
+(() => {
+  const list = document.getElementById("ordersList");
+  const empty = document.getElementById("ordersEmpty");
+  if (!list || !empty) return;
+
+  const applyEmptyState = () => {
+    const cards = list.querySelectorAll(".order-card");
+    const hasOrders = cards.length > 0;
+
+    empty.style.display = hasOrders ? "none" : "grid";
+    list.style.display = hasOrders ? "flex" : "none";
+  };
+
+  // show cancel button ONLY for packaging stage (safety)
+  list.querySelectorAll(".order-card").forEach(card => {
+    const stage = card.dataset.stage;
+    const cancelBtn = card.querySelector(".order-cancel");
+    if (cancelBtn) {
+      cancelBtn.style.display = (stage === "packaging") ? "inline-flex" : "none";
+    }
+  });
+
+  window.addEventListener("DOMContentLoaded", applyEmptyState);
+  applyEmptyState();
+})();
+
+// view order box
+const modal = document.getElementById("orderModal");
+const closeBtn = document.getElementById("orderModalClose");
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".view-details-btn");
+  if(!btn) return;
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+});
+
+modal.addEventListener("click", (e) => {
+  if(e.target === modal){
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+});
+// profile addresses section
+// ===== Addresses (ONLY open/close modal) =====
+(() => {
+  const modal = document.getElementById("addrModal");
+  const addBtn = document.getElementById("addrAddBtn");
+  const closeBtn = document.getElementById("addrClose");
+  const cancelBtn = document.getElementById("addrCancelBtn");
+  const title = document.getElementById("addrModalTitle");
+
+  if (!modal || !addBtn || !closeBtn || !cancelBtn) return;
+
+  const openModal = (mode) => {
+    title.textContent = mode === "edit" ? "Edit Address" : "Add Address";
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  // Add
+  addBtn.addEventListener("click", () => openModal("add"));
+
+  // Edit (any edit button)
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".addr-edit-pro")) openModal("edit");
+  });
+
+  // Close
+  closeBtn.addEventListener("click", closeModal);
+  cancelBtn.addEventListener("click", closeModal);
+
+  // Outside click close
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+})();
