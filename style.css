@@ -651,12 +651,14 @@ a{ text-decoration:none; color:inherit; }
   .lo-grid{ grid-template-columns: repeat(2, 1fr); gap: 24px; }
 }
 @media (max-width: 560px){
-  .lo-grid{ grid-template-columns: repeat(2, 1fr); gap: 18px; }
-  .lo-card.v2{ max-width: 310px; }     /* stays stable */
+  .lo-grid{ grid-template-columns: repeat(1, 1fr); gap: 18px; }
+  .lo-card.v2{ max-width: 100%; }     /* stays stable */
 }
 @media (max-width: 380px){
   .lo-grid{ grid-template-columns: 1fr; }
 }
+
+
 /* Card – make it wider */
 .lo-card.v2{
   width: 100%;
