@@ -46,16 +46,16 @@
 
         <!-- Desktop icons only (click -> brown fill) -->
         <div class="nav-icons" aria-label="Quick actions">
-          <button class="icon-btn nav-action active" data-action="profile" aria-label="Profile">
+          <button class="icon-btn nav-action active" data-action="profile" aria-label="Profile" onclick="profile();">
             <i class="fa-regular fa-user"></i>
           </button>
 
-          <button class="icon-btn nav-action" data-action="wishlist" aria-label="Wishlist">
+          <button class="icon-btn nav-action" data-action="wishlist" aria-label="Wishlist" onclick="wishlist();">
             <i class="fa-regular fa-heart"></i>
             <span class="badge">5</span>
           </button>
 
-          <button class="icon-btn nav-action" data-action="cart" aria-label="Cart">
+          <button class="icon-btn nav-action" data-action="cart" aria-label="Cart" onclick="cart();">
             <i class="fa-solid fa-cart-shopping"></i>
           </button>
         </div>
@@ -86,16 +86,16 @@
 
   <!-- Mobile bottom nav -->
   <nav class="bottom-nav" aria-label="Bottom Navigation">
-    <a href="#profile" class="bnav-link active" data-target="profile" aria-label="Profile">
+    <a href="#profile" class="bnav-link active" data-target="profile" aria-label="Profile" onclick="profile();">
       <i class="fa-regular fa-user"></i>
     </a>
 
-    <a href="#wishlist" class="bnav-link" data-target="wishlist" aria-label="Wishlist">
+    <a href="#wishlist" class="bnav-link" data-target="wishlist" aria-label="Wishlist" onclick="wishlist();">
       <i class="fa-regular fa-heart"></i>
       <span class="mini-badge">5</span>
     </a>
 
-    <a href="#cart" class="bnav-link" data-target="cart" aria-label="Cart">
+    <a href="#cart" class="bnav-link" data-target="cart" aria-label="Cart" onclick="cart();">
       <i class="fa-solid fa-cart-shopping"></i>
     </a>
   </nav>

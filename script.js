@@ -371,3 +371,13 @@ document.addEventListener("click", (e) => {
 });
 
 window.addEventListener("DOMContentLoaded", updateEmptyState);
+
+function wishlist() {
+  window.location.href = "wishlist.html";
+}
+function cart() {
+  window.location.href = "cart.html";
+}
+function profile() {
+  window.location.href = "profile.html";
+}
