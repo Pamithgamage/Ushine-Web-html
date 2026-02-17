@@ -1,0 +1,337 @@
+:root{
+  --brown: rgba(122,90,67,.95);
+  --text: #111;
+  --muted: rgba(0,0,0,.55);
+  --line: rgba(0,0,0,.10);
+  --shadow: 0 18px 55px rgba(0,0,0,.12);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin:0;
+  font-family:"Nunito", system-ui, sans-serif;
+  color: var(--text);
+  background:#fff;
+}
+
+.co-container{
+  width: min(1200px, calc(100% - 72px));
+  margin: 0 auto;
+  padding: 26px 0 80px;
+}
+@media(max-width:560px){
+  .co-container{ width: calc(100% - 32px); }
+}
+
+.co-top h1{
+  margin:0 0 6px;
+  font-size: 38px;
+  font-weight: 1000;
+}
+.co-top p{
+  margin:0 0 18px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.co-grid{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 22px;
+  align-items:start;
+}
+@media(max-width:980px){
+  .co-grid{ grid-template-columns: 1fr; }
+}
+
+/* Cards */
+.co-card{
+  background:#fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.co-card-head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.co-card h2{
+  margin:0;
+  font-size: 18px;
+  font-weight: 1000;
+}
+
+.co-badge{
+  display:inline-flex;
+  gap: 8px;
+  align-items:center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.05);
+  border: 1px solid rgba(0,0,0,.08);
+  color: rgba(0,0,0,.65);
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.co-link{
+  border:none;
+  background: transparent;
+  cursor:pointer;
+  color: rgba(0,0,0,.65);
+  font-weight: 1000;
+  text-decoration: underline;
+  font-family:"Nunito", sans-serif;
+}
+
+/* Fields */
+.co-field label{
+  display:block;
+  margin: 0 0 8px;
+  font-weight: 1000;
+}
+
+.co-field input{
+  width:100%;
+  border:none;
+  outline:none;
+  background:#ededed;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 800;
+  color: rgba(0,0,0,.75);
+}
+
+.co-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.co-3{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+@media(max-width:680px){
+  .co-2, .co-3{ grid-template-columns: 1fr; }
+}
+
+/* Shipping radio */
+.co-radio{ display:flex; flex-direction: column; gap: 10px; }
+.co-radio-row{
+  display:flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(0,0,0,.02);
+  cursor:pointer;
+}
+.co-radio-row input{ accent-color: #111; }
+.co-radio-main{ display:flex; flex-direction: column; }
+.co-radio-main strong{ font-weight: 1000; }
+.co-radio-main small{ color: var(--muted); font-weight: 800; }
+.co-radio-price{ margin-left:auto; font-weight: 1000; }
+
+/* Payment */
+.co-pay{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+@media(max-width:680px){
+  .co-pay{ grid-template-columns: 1fr 1fr; }
+}
+
+.co-pay-btn{
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.14);
+  background: rgba(0,0,0,.03);
+  padding: 10px 10px;
+  cursor:pointer;
+  font-weight: 1000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 8px;
+  font-family:"Nunito", sans-serif;
+}
+.co-pay-btn img{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+.co-pay-btn.is-active{
+  background: rgba(122,90,67,.14);
+  border-color: rgba(122,90,67,.22);
+}
+.co-pay-panel{ display:none; }
+.co-pay-panel.is-show{ display:block; }
+
+.co-pay-note{
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+  padding: 8px 0 2px;
+}
+
+/* Summary */
+.sum{
+  background:#fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  position: sticky;
+  top: 18px;
+}
+@media(max-width:980px){
+  .sum{ position: static; }
+}
+
+.sum-head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.sum h2{
+  margin:0;
+  font-size: 18px;
+  font-weight: 1000;
+}
+
+.sum-items{ display:flex; flex-direction: column; gap: 12px; margin-bottom: 12px; }
+.sum-item{
+  display:grid;
+  grid-template-columns: 54px 1fr auto;
+  gap: 12px;
+  align-items:center;
+  padding: 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(0,0,0,.02);
+}
+.sum-item img{
+  width:54px; height:54px;
+  border-radius: 14px;
+  object-fit: cover;
+  display:block;
+}
+.si h4{ margin:0 0 2px; font-weight: 1000; font-size: 14px; }
+.si p{ margin:0; color: var(--muted); font-weight: 900; font-size: 12px; }
+
+.qty-mini{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+.qmini{
+  border:none;
+  background: transparent;
+  cursor:pointer;
+  font-weight: 1000;
+  font-size: 16px;
+  width: 22px;
+  height: 22px;
+}
+.qty-mini .qval{
+  min-width: 18px;
+  text-align:center;
+  font-weight: 1000;
+}
+
+.sum-row{
+  display:flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,.08);
+  font-weight: 1000;
+}
+.sum-row.total{
+  font-size: 16px;
+}
+
+.sum-btn{
+  width:100%;
+  height: 48px;
+  border-radius: 999px;
+
+  /* ✅ outlined style */
+  border: 2px solid rgba(0, 0, 0, 0.95);
+  background: transparent;
+  color: rgba(0, 0, 0, 0.95);
+
+  font-weight: 1000;
+  font-family:"Nunito", sans-serif;
+  cursor:pointer;
+
+  /* ✅ button ටිකක් පහලට */
+  margin-top: 14px;
+
+  transition: .25s ease;
+}
+
+.sum-btn:hover{
+  background: rgba(0, 0, 0, 0.95);
+  color:#fff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(33, 33, 33, 0.35);
+}
+
+.sum-btn:active{
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(39, 39, 39, 0.25);
+}
+
+
+.sum-note{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.45;
+}
+/* ===== Saved Address Dropdown (No JS) ===== */
+.co-saved{
+  margin-bottom: 12px;
+}
+
+.co-saved label{
+  display:block;
+  margin: 0 0 8px;
+  font-weight: 1000;
+  font-family:"Nunito", sans-serif;
+}
+
+.co-select{
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #ededed;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  color: rgba(0,0,0,.75);
+  cursor: pointer;
+
+  appearance: none;
+
+  /* small arrow */
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(0,0,0,.55) 50%),
+    linear-gradient(135deg, rgba(0,0,0,.55) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 12px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}

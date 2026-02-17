@@ -2946,3 +2946,61 @@ html,body{
   .addr-2col{ grid-template-columns: 1fr; }
   .addr-actions-row{ flex-direction: column; }
 }
+/* ===== Review Form ===== */
+.pv-review-form{
+  border-bottom: 1px solid rgba(0,0,0,.10);
+  padding-bottom: 16px;
+  margin-bottom: 14px;
+}
+
+.rv-stars{
+  display:flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  cursor:pointer;
+}
+
+.rv-stars i{
+  color: rgba(0,0,0,.35);
+  transition:.2s;
+}
+
+.rv-stars i.active{
+  color: rgba(122,90,67,.95);
+}
+
+.pv-review-form textarea{
+  width:100%;
+  min-height: 90px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.20);
+  padding: 12px;
+  font-family:"Nunito", sans-serif;
+  font-weight: 800;
+  margin-bottom: 12px;
+  resize: vertical;
+}
+
+/* review card */
+.review-card{
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,0,0,.10);
+}
+
+.review-head{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 4px;
+}
+
+.review-stars i{
+  margin-left: 2px;
+}
+
+.review-text{
+  margin:0;
+  color: rgba(0,0,0,.65);
+  font-weight: 800;
+}
