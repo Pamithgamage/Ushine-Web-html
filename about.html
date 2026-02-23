@@ -7,6 +7,7 @@
     <title>U Shine Batik</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Nunito:wght@300;400;500;600;700&display=swap"
@@ -46,11 +47,13 @@
 
                 <!-- Desktop icons only (click -> brown fill) -->
                 <div class="nav-icons" aria-label="Quick actions">
-                    <button class="icon-btn nav-action active" data-action="profile" aria-label="Profile" onclick="profile();">
+                    <button class="icon-btn nav-action active" data-action="profile" aria-label="Profile"
+                        onclick="profile();">
                         <i class="fa-regular fa-user"></i>
                     </button>
 
-                    <button class="icon-btn nav-action" data-action="wishlist" aria-label="Wishlist" onclick="wishlist();">
+                    <button class="icon-btn nav-action" data-action="wishlist" aria-label="Wishlist"
+                        onclick="wishlist();">
                         <i class="fa-regular fa-heart"></i>
                         <span class="badge">5</span>
                     </button>
@@ -93,68 +96,87 @@
         </a>
     </nav>
 
-    <!-- register -->
-    <main class="auth">
-    <!-- Left image -->
-    <section class="auth-left">
-      <img src="/images/login.jpg" alt="Sri Lankan traditional art">
-    </section>
+    <!-- about us -->
+    <header class="au-hero">
+        <div class="au-hero-inner">
+            <h1>Crafted with Care. Worn with Pride.</h1>
+            <p class="au-sub">
+                We create premium handmade batik sarees inspired by Sri Lanka’s heritage,
+                designed for the modern woman.
+            </p>
+        </div>
+    </header>
 
-    <!-- Right form -->
-    <section class="auth-right">
-      <div class="auth-card">
+    <main class="au">
+        <div class="au-container">
 
-        <h1 class="auth-title">Create Account</h1>
-        <p class="auth-sub">Fill in the details to get started</p>
+            <!-- Story -->
+            <section class="au-grid">
+                <div class="au-card">
+                    <h2>Our Story</h2>
+                    <p>
+                        U Shine Batik was born from a love for Sri Lankan tradition and a desire to
+                        present it with a modern, elegant feel. Every saree is carefully designed,
+                        hand-crafted, and quality checked to ensure you receive a piece that feels
+                        special from the first touch.
+                    </p>
+                    <p>
+                        From selecting fabrics to final finishing, we focus on detail, comfort, and
+                        durability—so you can wear confidence, not just clothing.
+                    </p>
 
-        <form class="auth-form" id="registerForm">
+                    <div class="au-bullets">
+                        <div class="au-bullet"><i class="fa-solid fa-check"></i> Handmade batik craftsmanship</div>
+                        <div class="au-bullet"><i class="fa-solid fa-check"></i> Premium fabric selection</div>
+                        <div class="au-bullet"><i class="fa-solid fa-check"></i> Island-wide delivery</div>
+                    </div>
+                </div>
 
-          <!-- Name -->
-          <label class="field">
-            <input type="text" placeholder="Enter Your Name" required>
-          </label>
+                <div class="au-media">
+                    <img src="/images/hero-1.png" alt="Batik work">
+                    <div class="au-media-badge">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <span>Premium Quality</span>
+                    </div>
+                </div>
+            </section>
 
-          <!-- Email -->
-          <label class="field">
-            <input type="email" placeholder="Enter Your Email" required>
-          </label>
+            <!-- Values -->
+            <section class="au-values">
+                <div class="au-sec-head">
+                    <h2>What We Stand For</h2>
+                    <p>Quality, culture, and care — in every order.</p>
+                </div>
 
-          <!-- Password -->
-          <label class="field field-pass">
-            <input id="regPass" type="password" placeholder="Enter Your Password" required>
-            <button class="pass-toggle" type="button" data-target="regPass">
-              <i class="fa-regular fa-eye"></i>
-            </button>
-          </label>
+                <div class="au-values-grid">
+                    <div class="val-card">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                        <h3>Authentic Craft</h3>
+                        <p>We keep the batik process true to tradition and add a modern touch in design.</p>
+                    </div>
 
-          <!-- Confirm Password -->
-          <label class="field field-pass">
-            <input id="regConfirm" type="password" placeholder="Confirm Your Password" required>
-            <button class="pass-toggle" type="button" data-target="regConfirm">
-              <i class="fa-regular fa-eye"></i>
-            </button>
-          </label>
+                    <div class="val-card">
+                        <i class="fa-solid fa-gem"></i>
+                        <h3>Premium Materials</h3>
+                        <p>Soft, breathable fabrics chosen for comfort and an elegant drape.</p>
+                    </div>
 
-          <p class="error-text" id="errorText"></p>
+                    <div class="val-card">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h3>Fast Delivery</h3>
+                        <p>Secure packaging and reliable island-wide delivery with updates.</p>
+                    </div>
 
-          <button class="btn-login btn-primary-login" type="submit">Register</button>
+                    <div class="val-card">
+                        <i class="fa-solid fa-headset"></i>
+                        <h3>Friendly Support</h3>
+                        <p>Quick replies and real help for your order, sizes, and care guidance.</p>
+                    </div>
+                </div>
+            </section>
 
-          <div class="lo-top-line"></div>
-
-          <button class="btn btn-google" type="button">
-            <img class="g-icon" src="/images/google.png" alt="Google">
-            Register with Google
-          </button>
-
-          <p class="auth-footer">
-            Already have an account?
-            <a href="login.html" class="link">Login Here</a>
-          </p>
-        </form>
-
-      </div>
-    </section>
-  </main>
+        </div>
+    </main>
 
 
     <footer class="site-footer">
