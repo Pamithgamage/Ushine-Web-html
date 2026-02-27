@@ -55,6 +55,7 @@ body{
   margin:0;
   color: rgba(0,0,0,.55);
   font-weight: 800;
+  font-family: "Italiana", serif;
 }
 
 .cu-container{
@@ -323,4 +324,7 @@ body{
   color: var(--muted);
   font-weight: 900;
   font-size: 13px;
+}
+.head{
+  font-family: "Italiana", serif;
 }

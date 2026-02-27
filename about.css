@@ -55,6 +55,7 @@ body{
   font-weight: 800;
   max-width: 720px;
   margin-inline:auto;
+  font-family: "Italiana", serif;
 }
 
 /* Layout */
@@ -299,3 +300,7 @@ body{
 .cta-dark:hover{ filter: brightness(1.03); }
 
 .cta-ghost:hover{ background: rgba(0,0,0,.06); }
+
+.head{
+  font-family: "Italiana", serif;
+}
